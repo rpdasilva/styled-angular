@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'styled-angular';
+  count = 0;
+  bgToggle = false;
+  currentBg = 'hotpink';
+
+  onClick() {
+    this.count++;
+  }
+
+  changeBg() {
+    this.bgToggle = !this.bgToggle;
+    this.currentBg = this.bgToggle ? 'black' : 'hotpink';
+  }
 }
