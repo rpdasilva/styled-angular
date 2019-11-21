@@ -30,11 +30,37 @@ console.log('Space', space({ mt: 2, px: 3 }));
 @Component({
   // tslint:disable-next-line:component-selector
   selector: 'button',
-  template: `<ng-content></ng-content>`,
+  template: `
+    <ng-content></ng-content>
+    <div>{{inputs.join(', ')}}</div>
+  `,
   // tslint:disable-next-line:no-inputs-metadata-property
   inputs: [
+    'color',
+    'bg',
+    'm',
+    'mt',
+    'mr',
+    'mb',
+    'ml',
+    'mx',
+    'my',
+    'p',
+    'pt',
+    'pr',
+    'pb',
+    'pl',
+    'px',
+    'py'
+  ]
+  // inputs: [
+  //   ...StyledInputs.color,
+  //   ...StyledInputs.space
+  // ]
+})
+export class ButtonComponent extends StyledComponent {
+  inputs = [
     ...StyledInputs.color,
     ...StyledInputs.space
-  ]
-})
-export class ButtonComponent extends StyledComponent {}
+  ];
+}
