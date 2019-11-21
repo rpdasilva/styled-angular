@@ -1,6 +1,8 @@
 import { StyledComponent } from './component';
 import { ClassLike } from './utils';
 
+const ngComponentDefAlias = 'ɵcmp';
+
 export function Styled(...styles) {
   // tslint:disable-next-line:only-arrow-functions
   return function <T extends ClassLike>(component: T) {
@@ -11,10 +13,10 @@ export function Styled(...styles) {
     console.log({component});
 
     const styledBase = Object.getPrototypeOf(component.prototype);
-    const { doCheck: componentDoCheck } = component.ngComponentDef;
+    const { doCheck: componentDoCheck } = component[ngComponentDefAlias];
     const { __applyStyles } = styledBase;
 
-    component.ngComponentDef.doCheck = function() {
+    component[ngComponentDefAlias].doCheck = function() {
       __applyStyles.call(this, styles);
       console.log('Apply styles', styles);
       if (componentDoCheck) {

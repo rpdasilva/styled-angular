@@ -2,13 +2,13 @@
   "name": "angular-emotion",
   "version": "0.0.1",
   "devDependencies": {
-    "@angular/common": "^8.2.3",
-    "@angular/core": "^8.2.3",
+    "@angular/common": "~9.0.0-rc.3",
+    "@angular/core": "~9.0.0-rc.3",
     "emotion": "^9.2.6"
   },
   "peerDependencies": {
-    "@angular/common": "^8.2.3",
-    "@angular/core": "^8.2.3",
+    "@angular/common": "~9.0.0-rc.3",
+    "@angular/core": "~9.0.0-rc.3",
     "emotion": "^9.2.6"
   }
 }

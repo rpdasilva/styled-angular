@@ -41,7 +41,6 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -132,6 +131,11 @@
           "options": {
             "tsConfig": "projects/angular-emotion/tsconfig.lib.json",
             "project": "projects/angular-emotion/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/angular-emotion/tsconfig.lib.prod.json"
+            }
           }
         },
         "test": {

@@ -1,19 +1,18 @@
-import { Component, HostBinding } from '@angular/core';
+import { Component } from '@angular/core';
 import { space } from 'styled-system';
 
-import { Styled, StyledComponent, css } from 'angular-emotion';
-// Why is this necessary in dev
-import { StyledInputs } from '../../../projects/angular-emotion/src/lib/inputs';
+import { Styled, StyledComponent, StyledInputs, css } from 'angular-emotion';
+// Why is this necessary?
+// import { StyledInputs } from '../../../projects/angular-emotion/src/lib/inputs';
 
 const color = css`color: blue`;
 
-console.log('Space', space({ mt: 2 }));
+console.log('Space', space({ mt: 2, px: 3 }));
 
 @Styled(
   space,
   props => css`
     background-color: ${props.bg};
-    padding: 1rem;
     font-size: 1.5rem;
     border: none;
     ${color};
