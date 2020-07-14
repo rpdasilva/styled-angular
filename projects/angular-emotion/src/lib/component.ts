@@ -2,6 +2,7 @@ import { HostBinding, Directive } from '@angular/core';
 import { css } from 'emotion';
 
 import { computeStyles } from './styles';
+import { ThemeProvider } from './provider';
 
 // tslint:disable-next-line:directive-class-suffix
 @Directive({})
@@ -12,7 +13,10 @@ export class StyledComponent {
 
   private __applyStyles(styles) {
     console.log('Applying styles', {styles});
-    const styledClass = computeStyles(css, styles, this);
+    const styledClass = computeStyles(css, styles, {
+      theme: ThemeProvider.themeConfig,
+      ...this,
+    });
     this.__classNames = styledClass;
   }
 }

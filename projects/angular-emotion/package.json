@@ -4,11 +4,13 @@
   "devDependencies": {
     "@angular/common": "~9.0.0-rc.3",
     "@angular/core": "~9.0.0-rc.3",
+    "@types/styled-system": "^5.1.4",
     "emotion": "^9.2.6"
   },
   "peerDependencies": {
     "@angular/common": "~9.0.0-rc.3",
     "@angular/core": "~9.0.0-rc.3",
+    "@types/styled-system": "^5.1.4",
     "emotion": "^9.2.6"
   }
 }

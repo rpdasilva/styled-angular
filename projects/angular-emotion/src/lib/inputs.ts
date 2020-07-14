@@ -1,64 +1,79 @@
 const space = [
+  'margin',
   'm',
+  'marginTop',
   'mt',
+  'marginRight',
   'mr',
+  'marginBottom',
   'mb',
+  'marginLeft',
   'ml',
+  'marginX',
   'mx',
+  'marginY',
   'my',
+  'padding',
   'p',
+  'paddingTop',
   'pt',
+  'paddingRight',
   'pr',
+  'paddingBottom',
   'pb',
+  'paddingLeft',
   'pl',
+  'paddingX',
   'px',
+  'paddingY',
   'py'
-];
-
-const width = [
-  'width'
-];
-
-const fontSize = [
-  'fontSize'
 ];
 
 const color = [
   'color',
-  'bg'
+  'bg',
+  'backgroundColor',
+  'opacity'
 ];
 
 const typography = [
   'fontFamily',
-  'textAlign',
-  'textDecoration',
-  'lineHeight',
+  'fontSize',
   'fontWeight',
-  'letterSpacing'
+  'lineHeight',
+  'letterSpacing',
+  'textAlign',
+  'fontStyle'
 ];
 
 const layout = [
-  'display',
-  'maxWidth',
-  'minWidth',
+  'width',
   'height',
-  'maxHeight',
+  'display',
+  'minWidth',
   'minHeight',
+  'maxWidth',
+  'maxHeight',
   'size',
-  'ratio',
-  'verticalAlign'
+  'verticalAlign',
+  'overflow',
+  'overflowX',
+  'overflowY'
 ];
 
 const flexbox = [
   'alignItems',
   'alignContent',
-  'alignSelf',
-  'flex',
-  'flexBasis',
-  'flexDirection',
-  'flexWrap',
+  'justifyItems',
   'justifyContent',
+  'flexWrap',
+  'flexDirection',
+  'flex',
+  'flexGrow',
+  'flexShrink',
+  'flexBasis',
   'justifySelf',
+  'alignSelf',
   'order'
 ];
 
@@ -72,17 +87,39 @@ const grid = [
   'gridAutoColumns',
   'gridAutoRows',
   'gridTemplateColumns',
-  'gridTemplateRows'
+  'gridTemplateRows',
+  'gridTemplateAreas',
+  'gridArea'
 ];
 
 const borders = [
   'border',
-  'borderTop',
-  'borderRight',
-  'borderBottom',
-  'borderLeft',
+  'borderWidth',
+  'borderStyle',
   'borderColor',
-  'borderRadius'
+  'borderRadius',
+  'borderTop',
+  'borderTopWidth',
+  'borderTopStyle',
+  'borderTopColor',
+  'borderTopLeftRadius',
+  'borderTopRightRadius',
+  'borderRight',
+  'borderRightWidth',
+  'borderRightStyle',
+  'borderRightColor',
+  'borderBottom',
+  'borderBottomWidth',
+  'borderBottomStyle',
+  'borderBottomColor',
+  'borderBottomLeftRadius',
+  'borderBottomRightRadius',
+  'borderLeft',
+  'borderLeftWidth',
+  'borderLeftStyle',
+  'borderLeftColor',
+  'borderX',
+  'borderY'
 ];
 
 const position = [
@@ -94,26 +131,31 @@ const position = [
   'zIndex'
 ];
 
-const misc = [
-  'boxShadow',
+const background = [
   'background',
   'backgroundImage',
   'backgroundSize',
   'backgroundPosition',
-  'backgroundRepeat',
-  'opacity'
+  'backgroundRepeat'
 ];
 
-const variants = [
+const shadow = [
+  'textShadow',
+  'boxShadow'
+];
+
+const variant = [
   'textStyle',
   'colors',
   'buttons'
 ];
 
+const theme = [
+  'theme'
+];
+
 const all = [
   ...space,
-  ...width,
-  ...fontSize,
   ...color,
   ...typography,
   ...layout,
@@ -121,14 +163,13 @@ const all = [
   ...grid,
   ...borders,
   ...position,
-  ...misc,
-  ...variants
+  ...background,
+  ...shadow,
+  ...variant
 ];
 
 export const StyledInputs = {
   space,
-  width,
-  fontSize,
   color,
   typography,
   layout,
@@ -136,7 +177,9 @@ export const StyledInputs = {
   grid,
   borders,
   position,
-  misc,
-  variants,
+  background,
+  shadow,
+  theme,
+  variant,
   all
 };

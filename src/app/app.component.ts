@@ -17,6 +17,6 @@ export class AppComponent {
 
   changeBg() {
     this.bgToggle = !this.bgToggle;
-    this.currentBg = this.bgToggle ? 'black' : 'hotpink';
+    this.currentBg = this.bgToggle ? 'lightgreen' : 'hotpink';
   }
 }

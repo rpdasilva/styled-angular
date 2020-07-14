@@ -1,4 +1,16 @@
-<button color="red" [p]="3" [bg]="currentBg" (click)="onClick()">Increment</button>
-{{ count }}
-<br><br>
-<button [m]="2" [px]="4" [py]="3" bg="hotpink" (click)="changeBg()">Change Bg</button>
+<box [p]="4">
+  <button color="red" [p]="3" [bg]="currentBg" (click)="onClick()">Increment</button>
+  {{ count }}
+  <br><br>
+  <button [m]="2" [px]="4" [py]="3" bg="hotpink" (click)="changeBg()">Change Bg</button>
+
+  <box
+    [p]="4"
+    color="blue"
+    [fontSize]="3"
+    border="2px solid"
+    [width]="[ 1, 1/2 ]"
+  >
+    Some content here
+  </box>
+</box>
